@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <section>
+        <header class="header" <img src="" alt="" class="header-logo">
+            <h1>Maria do Bairro - Padaria</h1>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </nav>
+    </section>
+    <h3>Feedback</h3>
+    <form action="#" method="post">
+
+        <label for="nomeCliente">Nome do cliente (opcional):</label>
+        <input type="text" id="nomeCliente" name="nomeCliente" placeholder="Seu nome">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="produtoAvaliado">Produto/Serviço avaliado:</label>
+        <select id="produtoAvaliado" name="produtoAvaliado" required>
+            <option value="">--Selecione--</option>
+            <option value="produto1">🍞 Pães Artesanais</option>
+            <option value="produto2">🧁 Doces e Bolos</option>
+            <option value="servico1">👥 Atendimento</option>
+            <option value="servico2">🏠 Ambiente</option>
+            <option value="servico2">💲Preços</option>
+        </select>
+
+        <label>Avaliação:</label>
+        <div class="rating">
+            <label><input type="radio" name="avaliacao" value="Excelente" required> ⭐ Excelente</label>
+            <label><input type="radio" name="avaliacao" value="Bom"> 👍 Bom</label>
+            <label><input type="radio" name="avaliacao" value="Regular"> 😐 Regular</label>
+            <label><input type="radio" name="avaliacao" value="Ruim"> 👎 Ruim</label>
+        </div>
+
+        <label for="comentarios">Comentários:</label>
+        <textarea id="comentarios" name="comentarios" placeholder="Deixe seu comentário aqui" required></textarea>
+
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="recomendaria" value="sim"> 👍 Recomendaria para amigos</label><br>
+            <label><input type="checkbox" name="autorizaPublicacao" value="sim"> 📰 Autoriza publicação do
+                depoimento</label>
+        </div>
+
+        <button type="submit">Enviar Feedback</button>
+    </form>
+    </section>
+</body>
+
+</html>

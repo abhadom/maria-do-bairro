@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <section>
+        <header class="header" <img src="" alt="" class="header-logo">
+            <h1>Maria do Bairro - Padaria</h1>
+        </header>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section>
+        <h3>Contato Geral</h3>
+        <form action="#" method="post">
+            <label for="nomeContato">Nome:</label>
+            <input type="text" id="nomeContato" name="nomeContato" required>
+
+            <label for="emailContato">Email:</label>
+            <input type="email" id="emailContato" name="emailContato" required>
+
+            <label for="telefoneContato">Telefone</label>
+            <input type="text">
+
+            <label for="assuntoContato">Assunto:</label>
+            <select id="assuntoContato" name="assuntoContato" required>
+                <option value="">--Selecione--</option>
+                <option value="atendimento">Informações Gerais ℹ️</option>
+                <option value="produtos">Reclamação ⚠️</option>
+                <option value="entrega">Sugestão 💡</option>
+                <option value="servico2">Elogio 🌟</option>
+                <option value="servico2">Pedido Especial 🎂</option>
+                <option value="servico2">Outros ❓</option>
+            </select>
+
+            <label for="mensagemContato">Mensagem:</label>
+            <textarea id="mensagemContato" name="mensagemContato" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+</body>
+
+</html>
