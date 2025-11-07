@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Maria do Bairro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <section class="top-section">
+        <header class="header">
+            <img src="images/logo/logo.png" alt="Logo" class="header-logo">
+            <h1>Maria do Bairro - Carrinho</h1>
+        </header>
+
+        <nav class="nav">
+            <div class="nav-container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pedidos.html">Pedidos</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="carrinho.html" class="active">🛒 Carrinho</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <main class="main">
+        <section class="hero" style="background-image: url('images/hero/carrinho-hero.jpg');">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h2>🛒 Seu Carrinho</h2>
+            <p>Revise seus produtos e finalize seu pedido</p>
+        </div>
+    </div>
+</section>
+        <section class="carrinho-section">
+            <div class="carrinho-header">
+                <h2>🛒 Seu Carrinho de Compras</h2>
+                <p>Adicione produtos deliciosos e faça seu pedido!</p>
+            </div>
+
+            <div class="carrinho-container">
+                <!-- PRODUTOS -->
+                <div class="produtos-disponiveis">
+                    <h3>🍞 Nossos Produtos</h3>
+                    
+                    <div class="categorias">
+                        <button class="btn-categoria active" data-categoria="todos">Todos</button>
+                        <button class="btn-categoria" data-categoria="Pães">Pães</button>
+                        <button class="btn-categoria" data-categoria="Doces">Doces</button>
+                        <button class="btn-categoria" data-categoria="Salgados">Salgados</button>
+                        <button class="btn-categoria" data-categoria="Bebidas">Bebidas</button>
+                    </div>
+
+                    <div class="lista-produtos" id="listaProdutos">
+                        <!-- Produtos carregados via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- CARRINHO -->
+                <div class="carrinho-compras">
+                    <div class="carrinho-resumo">
+                        <h3>📦 Seu Pedido</h3>
+                        <div class="carrinho-stats">
+                            <div class="stat-item">
+                                <span>Itens no carrinho:</span>
+                                <strong id="quantidadeItens">0</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>Desconto aplicado:</span>
+                                <strong id="descontoAplicado">R$ 0,00</strong>
+                            </div>
+                            <div class="stat-item">
+                                <span>Total do pedido:</span>
+                                <strong id="totalCarrinho">R$ 0,00</strong>
+                            </div>
+                            <div class="stat-item pontos">
+                                <span>Pontos ganhos:</span>
+                                <strong>⭐ <span id="pontosGanhos">0</span></strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="carrinhoVazio" class="carrinho-vazio">
+                        <div class="vazio-icon">😔</div>
+                        <p>Seu carrinho está vazio</p>
+                        <p>Adicione alguns produtos deliciosos!</p>
+                    </div>
+
+                    <div id="carrinhoItens" style="display: none;">
+                        <div class="carrinho-header">
+                            <h4>Itens Selecionados</h4>
+                        </div>
+                        <div id="listaCarrinho" class="lista-carrinho">
+                            <!-- Itens do carrinho aparecem aqui -->
+                        </div>
+
+                        <div class="carrinho-actions">
+                            <button onclick="limparCarrinho()" class="btn-limpar">
+                                🗑️ Limpar Carrinho
+                            </button>
+                            <button onclick="finalizarPedido()" class="btn-finalizar">
+                                ✅ Finalizar Pedido
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Maria do Bairro - Padaria. Todos os direitos reservados</p>
+    </footer>
+
+    <!-- 🔗 SCRIPT DO CARRINHO -->
+    <script src="js/system.js"></script>
+    <script>
+// Sistema de filtros por categoria
+document.addEventListener('DOMContentLoaded', function() {
+    const categoriaBtns = document.querySelectorAll('.btn-categoria');
+    const produtos = document.querySelectorAll('.card-produto');
+    
+    categoriaBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remover active de todos os botões
+            categoriaBtns.forEach(b => b.classList.remove('active'));
+            // Adicionar active ao botão clicado
+            this.classList.add('active');
+            
+            const categoria = this.dataset.categoria;
+            
+            // Filtrar produtos
+            produtos.forEach(produto => {
+                const produtoCategoria = produto.querySelector('.produto-categoria').textContent;
+                
+                if (categoria === 'todos' || produtoCategoria === categoria) {
+                    produto.style.display = 'flex';
+                    produto.style.animation = 'fadeInUp 0.4s ease';
+                } else {
+                    produto.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
+// Animação para os produtos
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`;
+document.head.appendChild(style);
+</script>
+</body>
+</html>

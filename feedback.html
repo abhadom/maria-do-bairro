@@ -1,69 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Feedback - Maria do Bairro</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <section>
-        <header class="header" <img src="" alt="" class="header-logo">
+    <section class="top-section">
+        <header class="header">
+            <img src="images/logo/logo.png" alt="Logo Maria do Bairro" class="header-logo">
             <h1>Maria do Bairro - Padaria</h1>
         </header>
 
         <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pedidos.html">Pedidos</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="newsletter.html">Newsletter</a></li>
-            </ul>
+            <div class="nav-container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pedidos.html">Pedidos</a></li>
+                    <li><a href="feedback.html" class="active">Feedback</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="carrinho.html">🛒 Carrinho</a></li>
+                </ul>
+            </div>
         </nav>
     </section>
-    <h3>Feedback</h3>
-    <form action="#" method="post">
 
-        <label for="nomeCliente">Nome do cliente (opcional):</label>
-        <input type="text" id="nomeCliente" name="nomeCliente" placeholder="Seu nome">
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="produtoAvaliado">Produto/Serviço avaliado:</label>
-        <select id="produtoAvaliado" name="produtoAvaliado" required>
-            <option value="">--Selecione--</option>
-            <option value="produto1">🍞 Pães Artesanais</option>
-            <option value="produto2">🧁 Doces e Bolos</option>
-            <option value="servico1">👥 Atendimento</option>
-            <option value="servico2">🏠 Ambiente</option>
-            <option value="servico2">💲Preços</option>
-        </select>
-
-        <label>Avaliação:</label>
-        <div class="rating">
-            <label><input type="radio" name="avaliacao" value="Excelente" required> ⭐ Excelente</label>
-            <label><input type="radio" name="avaliacao" value="Bom"> 👍 Bom</label>
-            <label><input type="radio" name="avaliacao" value="Regular"> 😐 Regular</label>
-            <label><input type="radio" name="avaliacao" value="Ruim"> 👎 Ruim</label>
+    <main class="main">
+        <!-- HERO SECTION FEEDBACK -->
+        <section class="hero" style="background-image: url('images/hero/feedback-hero.jpg');">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h2>💝 Sua Opinião é Muito Importante!</h2>
+            <p>Nos ajude a melhorar contando sobre sua experiência</p>
         </div>
+    </div>
+</section>
 
-        <label for="comentarios">Comentários:</label>
-        <textarea id="comentarios" name="comentarios" placeholder="Deixe seu comentário aqui" required></textarea>
+        <!-- DEPOIMENTOS EXISTENTES -->
+        <section class="depoimentos-section">
+            <div class="section-header">
+                <h2>⭐ O que Nossos Clientes Dizem</h2>
+                <p>Alguns depoimentos que recebemos com carinho</p>
+            </div>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="depoimento-estrelas">★★★★★</div>
+                    <p class="depoimento-texto">"Os pães são incríveis! Sempre fresquinhos e com aquele sabor caseiro que lembra a infância."</p>
+                    <div class="depoimento-autor">
+                        <strong>Maria Silva</strong>
+                        <span>Cliente há 3 anos</span>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-estrelas">★★★★★</div>
+                    <p class="depoimento-texto">"O bolo de chocolate é divino! Já encomendei para várias festas e sempre elogiam muito."</p>
+                    <div class="depoimento-autor">
+                        <strong>João Santos</strong>
+                        <span>Cliente frequente</span>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-estrelas">★★★★☆</div>
+                    <p class="depoimento-texto">"Atendimento muito simpático e preços justos. Ambiente aconchegante para tomar um café."</p>
+                    <div class="depoimento-autor">
+                        <strong>Ana Costa</strong>
+                        <span>Visita semanal</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="checkbox-group">
-            <label><input type="checkbox" name="recomendaria" value="sim"> 👍 Recomendaria para amigos</label><br>
-            <label><input type="checkbox" name="autorizaPublicacao" value="sim"> 📰 Autoriza publicação do
-                depoimento</label>
-        </div>
+        <!-- FORMULÁRIO DE FEEDBACK -->
+        <section class="form-section-feedback">
+            <div class="section-header">
+                <h2>📝 Deixe seu Feedback</h2>
+                <p>Conte-nos sobre sua experiência na nossa padaria</p>
+            </div>
 
-        <button type="submit">Enviar Feedback</button>
-    </form>
-    </section>
+            <form action="#" method="post" class="feedback-form">
+
+                <fieldset>
+                    <legend>👤 Seus Dados (Opcionais)</legend>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nomeFeedback">Como gostaria de ser chamado?</label>
+                            <input type="text" id="nomeFeedback" name="nomeFeedback" placeholder="Seu nome ou apelido">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailFeedback">E-mail (para respondermos):</label>
+                            <input type="email" id="emailFeedback" name="emailFeedback" placeholder="seu@email.com">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>🎯 Sua Avaliação</legend>
+                    
+                    <div class="form-group">
+                        <label for="produtoServico">O que você está avaliando? *</label>
+                        <select id="produtoServico" name="produtoServico" required>
+                            <option value="">-- Escolha uma opção --</option>
+                            <option value="paes">🥖 Pães artesanais</option>
+                            <option value="doces">🍰 Doces e bolos</option>
+                            <option value="salgados">🥐 Salgados</option>
+                            <option value="bebidas">☕ Bebidas</option>
+                            <option value="atendimento">💁 Atendimento</option>
+                            <option value="ambiente">🏠 Ambiente da loja</option>
+                            <option value="precos">💰 Preços</option>
+                            <option value="limpeza">✨ Limpeza</option>
+                            <option value="outros">🔍 Outros</option>
+                        </select>
+                    </div>
+
+                    <!-- AVALIAÇÃO COM ESTRELAS -->
+                    <div class="form-group">
+                        <label class="form-label">Como você avalia? *</label>
+                        <div class="avaliacao-estrelas">
+                            <div class="estrelas-container">
+                                <input type="radio" id="estrela5" name="avaliacao" value="excelente" required>
+                                <label for="estrela5" class="estrela">&#9733;</label>
+                                
+                                <input type="radio" id="estrela4" name="avaliacao" value="muito-bom">
+                                <label for="estrela4" class="estrela">&#9733;</label>
+                                
+                                <input type="radio" id="estrela3" name="avaliacao" value="bom">
+                                <label for="estrela3" class="estrela">&#9733;</label>
+                                
+                                <input type="radio" id="estrela2" name="avaliacao" value="regular">
+                                <label for="estrela2" class="estrela">&#9733;</label>
+                                
+                                <input type="radio" id="estrela1" name="avaliacao" value="ruim">
+                                <label for="estrela1" class="estrela">&#9733;</label>
+                            </div>
+                            <div class="estrelas-labels">
+                                <span>Ruim</span>
+                                <span>Regular</span>
+                                <span>Bom</span>
+                                <span>Muito Bom</span>
+                                <span>Excelente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentarios">Conte mais detalhes:</label>
+                        <textarea id="comentarios" name="comentarios" 
+                                  placeholder="O que mais gostou? O que podemos melhorar? Sua sugestão é muito valiosa para nós!"
+                                  rows="4"></textarea>
+                        <small class="form-help">Seu comentário nos ajuda a crescer e melhorar!</small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>📋 Permissões</legend>
+                    
+                    <div class="checkbox-group-melhorado">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="recomendaria">
+                            <span class="checkbox-custom"></span>
+                            <div class="checkbox-content">
+                                <span class="checkbox-text">👍 Sim, recomendaria para amigos e familiares</span>
+                            </div>
+                        </label>
+                        
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="publicacao">
+                            <span class="checkbox-custom"></span>
+                            <div class="checkbox-content">
+                                <span class="checkbox-text">📰 Autorizo a publicação do meu depoimento no site</span>
+                                <small class="checkbox-help">Seu nome será mantido em sigilo se preferir</small>
+                            </div>
+                        </label>
+                        
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="contato">
+                            <span class="checkbox-custom"></span>
+                            <div class="checkbox-content">
+                                <span class="checkbox-text">📞 Posso ser contactado para dar mais detalhes</span>
+                                <small class="checkbox-help">Apenas se necessário para entender melhor seu feedback</small>
+                            </div>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit-feedback">
+                        <span class="btn-icon">💝</span>
+                        Enviar Feedback
+                    </button>
+                    <p class="form-note">
+                        🔒 Seus dados estão protegidos e serão usados apenas para melhorar nossos serviços
+                    </p>
+                </div>
+            </form>
+        </section>
+
+        <!-- AGRADECIMENTO -->
+        <section class="agradecimento-section">
+            <div class="agradecimento-content">
+                <h3>🙏 Muito Obrigado!</h3>
+                <p>Seu feedback é essencial para continuarmos oferecendo o melhor atendimento e produtos de qualidade para você.</p>
+                <p><strong>Cada opinião nos ajuda a crescer e manter viva a tradição da padaria artesanal!</strong></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Maria do Bairro - Padaria. Todos os direitos reservados</p>
+        <address>
+            Contato: <a href="mailto:contato@meusite.com">contato@meusite.com</a><br>
+            Rua das Orquídeas, 174 - Pouso Alegre, MG, Brasil.
+        </address>
+        <nav class="footer-nav">
+            <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
+        </nav>
+    </footer>
+
+    <script>
+    // Sistema de avaliação por estrelas
+    document.addEventListener('DOMContentLoaded', function() {
+        const estrelas = document.querySelectorAll('.estrela');
+        const inputs = document.querySelectorAll('.avaliacao-estrelas input');
+        
+        estrelas.forEach((estrela, index) => {
+            estrela.addEventListener('mouseover', function() {
+                // Reset todas as estrelas
+                estrelas.forEach(e => e.classList.remove('ativa'));
+                // Ativar até a estrela atual
+                for (let i = 0; i <= index; i++) {
+                    estrelas[i].classList.add('ativa');
+                }
+            });
+            
+            estrela.addEventListener('click', function() {
+                // Marcar o input correspondente
+                inputs[index].checked = true;
+            });
+        });
+        
+        // Manter estrelas ativas quando um input estiver selecionado
+        inputs.forEach((input, index) => {
+            input.addEventListener('change', function() {
+                estrelas.forEach(e => e.classList.remove('ativa'));
+                for (let i = 0; i <= index; i++) {
+                    estrelas[i].classList.add('ativa');
+                }
+            });
+        });
+        
+        // Validação do formulário
+        const form = document.querySelector('.feedback-form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const avaliacaoSelecionada = document.querySelector('input[name="avaliacao"]:checked');
+                const produtoSelecionado = document.getElementById('produtoServico').value;
+                
+                if (!avaliacaoSelecionada) {
+                    alert('Por favor, selecione uma avaliação com as estrelas');
+                    return;
+                }
+                
+                if (!produtoSelecionado) {
+                    alert('Por favor, selecione o que você está avaliando');
+                    return;
+                }
+                
+                // Sucesso!
+                alert('💝 Obrigado pelo seu feedback! Sua opinião é muito importante para nós.');
+                form.reset();
+                
+                // Reset das estrelas
+                estrelas.forEach(e => e.classList.remove('ativa'));
+            });
+        }
+    });
+    </script>
 </body>
 
 </html>

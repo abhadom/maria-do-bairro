@@ -4,58 +4,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Contato - Maria do Bairro</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <section>
-        <header class="header" <img src="" alt="" class="header-logo">
+    <section class="top-section">
+        <header class="header">
+            <img src="images/logo/logo.png" alt="Logo Maria do Bairro" class="header-logo">
             <h1>Maria do Bairro - Padaria</h1>
         </header>
 
         <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pedidos.html">Pedidos</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="newsletter.html">Newsletter</a></li>
-            </ul>
+            <div class="nav-container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pedidos.html">Pedidos</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="carrinho.html">🛒 Carrinho</a></li>
+                </ul>
+            </div>
         </nav>
     </section>
 
-    <section>
-        <h3>Contato Geral</h3>
-        <form action="#" method="post">
-            <label for="nomeContato">Nome:</label>
-            <input type="text" id="nomeContato" name="nomeContato" required>
+    <main class="main">
+        <!-- HERO CONTATO -->
+        <section class="hero" style="background-image: url('/images/hero/contato-hero.jpg');">
+            <div class="hero-content">
+                <h2>📞 Fale Conosco</h2>
+                <p>Estamos aqui para te atender da melhor forma possível</p>
+            </div>
+        </section>
 
-            <label for="emailContato">Email:</label>
-            <input type="email" id="emailContato" name="emailContato" required>
+        <!-- INFORMAÇÕES RÁPIDAS -->
+        <section class="info-rapida">
+            <div class="info-cards">
+                <div class="info-card">
+                    <span class="info-icon">📞</span>
+                    <h4>Telefone</h4>
+                    <p><strong>(35) 3421-1234</strong></p>
+                    <small>Segunda a Domingo, 6h às 19h</small>
+                </div>
 
-            <label for="telefoneContato">Telefone</label>
-            <input type="text">
+                <div class="info-card">
+                    <span class="info-icon">📧</span>
+                    <h4>Email</h4>
+                    <p><strong>contato@maridobairro.com</strong></p>
+                    <small>Respondemos em até 24h</small>
+                </div>
 
-            <label for="assuntoContato">Assunto:</label>
-            <select id="assuntoContato" name="assuntoContato" required>
-                <option value="">--Selecione--</option>
-                <option value="atendimento">Informações Gerais ℹ️</option>
-                <option value="produtos">Reclamação ⚠️</option>
-                <option value="entrega">Sugestão 💡</option>
-                <option value="servico2">Elogio 🌟</option>
-                <option value="servico2">Pedido Especial 🎂</option>
-                <option value="servico2">Outros ❓</option>
-            </select>
+                <div class="info-card">
+                    <span class="info-icon">📍</span>
+                    <h4>Endereço</h4>
+                    <p><strong>Rua das Orquídeas, 174 - Centro</strong></p>
+                    <small>Pouso Alegre - MG</small>
+                </div>
 
-            <label for="mensagemContato">Mensagem:</label>
-            <textarea id="mensagemContato" name="mensagemContato" required></textarea>
+                <div class="info-card">
+                    <span class="info-icon">🕒</span>
+                    <h4>Horário</h4>
+                    <p><strong>Seg a Sex:</strong> 6h-19h</p>
+                    <p><strong>Sáb e Dom:</strong> 6h-17h</p>
+                </div>
+            </div>
+        </section>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+        <!-- FORMULÁRIO DE CONTATO -->
+        <section class="form-section-pedidos">
+            <div class="section-header">
+                <h2>📝 Envie sua Mensagem</h2>
+                <p>Preencha o formulário abaixo que retornaremos em breve</p>
+            </div>
 
+            <form action="#" method="post" class="contact-form">
+                <div class="form-grid">
+                    <!-- Coluna 1 -->
+                    <div class="form-column">
+                        <fieldset>
+                            <legend>Informações Pessoais</legend>
+                            
+                            <div class="form-group">
+                                <label for="nomeContato" class="form-label">Nome completo: *</label>
+                                <input type="text" id="nomeContato" name="nomeContato" required 
+                                       placeholder="Seu nome completo">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emailContato" class="form-label">Email: *</label>
+                                <input type="email" id="emailContato" name="emailContato" required 
+                                       placeholder="seu@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefoneContato" class="form-label">Telefone:</label>
+                                <div class="input-with-symbol">
+                                    <span class="input-symbol">📱</span>
+                                    <input type="tel" id="telefoneContato" name="telefoneContato" 
+                                           pattern="[0-9]{2}[0-9]{5}[0-9]{4}" 
+                                           placeholder="(35) 99999-9999">
+                                </div>
+                                <small class="form-help">Formato: (35) 99999-9999</small>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Coluna 2 -->
+                    <div class="form-column">
+                        <fieldset>
+                            <legend>Sua Mensagem</legend>
+                            
+                            <div class="form-group">
+                                <label for="assuntoContato" class="form-label">Assunto: *</label>
+                                <select id="assuntoContato" name="assuntoContato" required>
+                                    <option value="">-- Selecione o assunto --</option>
+                                    <option value="informacoes">ℹ️ Informações gerais</option>
+                                    <option value="reclamacao">⚠️ Reclamação</option>
+                                    <option value="sugestao">💡 Sugestão</option>
+                                    <option value="elogio">🌟 Elogio</option>
+                                    <option value="pedido">🎂 Pedido especial</option>
+                                    <option value="trabalhe">💼 Trabalhe conosco</option>
+                                    <option value="fornecedor">🏭 Seja nosso fornecedor</option>
+                                    <option value="outros">❓ Outros</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="urgencia" class="form-label">Urgência:</label>
+                                <div class="radio-group-horizontal">
+                                    <label class="radio-option">
+                                        <input type="radio" name="urgencia" value="baixa" checked>
+                                        <span class="radio-custom">
+                                            <span class="radio-icon">😊</span>
+                                            <span class="radio-text">Baixa</span>
+                                        </span>
+                                    </label>
+                                    
+                                    <label class="radio-option">
+                                        <input type="radio" name="urgencia" value="media">
+                                        <span class="radio-custom">
+                                            <span class="radio-icon">😐</span>
+                                            <span class="radio-text">Média</span>
+                                        </span>
+                                    </label>
+                                    
+                                    <label class="radio-option">
+                                        <input type="radio" name="urgencia" value="alta">
+                                        <span class="radio-custom">
+                                            <span class="radio-icon">😰</span>
+                                            <span class="radio-text">Alta</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensagemContato" class="form-label">Mensagem: *</label>
+                                <textarea id="mensagemContato" name="mensagemContato" required 
+                                          minlength="10" maxlength="500" rows="5"
+                                          placeholder="Digite sua mensagem (mínimo 10 caracteres)"></textarea>
+                                <small class="form-help">Mínimo 10 caracteres - máximo 500 caracteres</small>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit-pedido">
+                        <span class="btn-icon">📨</span>
+                        Enviar Mensagem
+                    </button>
+                    <p class="form-note">⚡ Resposta garantida em até 24 horas úteis</p>
+                </div>
+            </form>
+        </section>
+
+        <!-- MAPA E LOCALIZAÇÃO -->
+        <section class="localizacao-section">
+            <div class="section-header">
+                <h2>📍 Nos Encontre</h2>
+                <p>Venha nos fazer uma visita e experimente nosso ambiente aconchegante</p>
+            </div>
+
+            <div class="localizacao-container">
+                <div class="mapa-container">
+                    <!-- Mapa placeholder - substitua pelo embed real do Google Maps -->
+                    <div style="background: #f8f9fa; border-radius: 12px; padding: 2rem; text-align: center; border: 2px solid #E8D6C3;">
+                        <h4>🗺️ Mapa da Localização</h4>
+                        <p style="color: #666; margin: 1rem 0;">Rua das Orquídeas, 174 - Centro, Pouso Alegre - MG</p>
+                        <a href="https://maps.app.goo.gl/example" target="_blank" class="btn-maps" style="display: inline-block;">
+                            📍 Abrir no Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="horarios-contato">
+                    <h3>🕒 Horários de Atendimento</h3>
+                    <div class="tabela-horarios">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Dia</th>
+                                    <th>Horário</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Segunda à Sexta</td>
+                                    <td>6h às 19h</td>
+                                </tr>
+                                <tr>
+                                    <td>Sábado</td>
+                                    <td>6h às 17h</td>
+                                </tr>
+                                <tr>
+                                    <td>Domingo</td>
+                                    <td>6h às 15h</td>
+                                </tr>
+                                <tr>
+                                    <td>Feriados</td>
+                                    <td>6h às 12h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="contato-rapido" style="margin-top: 2rem;">
+                        <h4>📞 Contato Rápido</h4>
+                        <p><strong>Telefone:</strong> (35) 3421-1234</p>
+                        <p><strong>WhatsApp:</strong> (35) 99999-9999</p>
+                        <p><strong>Email:</strong> contato@maridobairro.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Maria do Bairro - Padaria. Todos os direitos reservados</p>
+        <address>
+            Contato: <a href="mailto:contato@maridobairro.com">contato@maridobairro.com</a><br>
+            Rua das Orquídeas, 174 - Pouso Alegre, MG, Brasil.
+        </address>
+        <nav class="footer-nav">
+            <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
+        </nav>
+    </footer>
+
+    <script>
+        // Validação do formulário de contato
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            const telefoneInput = document.getElementById('telefoneContato');
+            
+            // Formatação do telefone
+            telefoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 11) value = value.slice(0, 11);
+                
+                if (value.length > 0) {
+                    if (value.length <= 2) {
+                        value = `(${value}`;
+                    } else if (value.length <= 7) {
+                        value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+                    } else {
+                        value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
+                    }
+                }
+                
+                e.target.value = value;
+            });
+            
+            form.addEventListener('submit', function(e) {
+                // Simulação de sucesso
+                e.preventDefault();
+                alert('✅ Mensagem enviada com sucesso!\n\nRetornaremos em até 24 horas. Obrigado pelo contato!');
+                form.reset();
+            });
+        });
+    </script>
 </body>
 
 </html>
