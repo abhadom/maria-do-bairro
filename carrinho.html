@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho - Maria do Bairro</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+
     <section class="top-section">
         <header class="header">
             <img src="images/logo/logo.png" alt="Logo" class="header-logo">
@@ -30,13 +32,13 @@
 
     <main class="main">
         <section class="hero" style="background-image: url('images/hero/carrinho-hero.jpg');">
-    <div class="hero-overlay">
-        <div class="hero-content">
-            <h2>🛒 Seu Carrinho</h2>
-            <p>Revise seus produtos e finalize seu pedido</p>
-        </div>
-    </div>
-</section>
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h2>🛒 Seu Carrinho</h2>
+                    <p>Revise seus produtos e finalize seu pedido</p>
+                </div>
+            </div>
+        </section>
         <section class="carrinho-section">
             <div class="carrinho-header">
                 <h2>🛒 Seu Carrinho de Compras</h2>
@@ -47,7 +49,7 @@
                 <!-- PRODUTOS -->
                 <div class="produtos-disponiveis">
                     <h3>🍞 Nossos Produtos</h3>
-                    
+
                     <div class="categorias">
                         <button class="btn-categoria active" data-categoria="todos">Todos</button>
                         <button class="btn-categoria" data-categoria="Pães">Pães</button>
@@ -120,38 +122,38 @@
     <!-- 🔗 SCRIPT DO CARRINHO -->
     <script src="js/system.js"></script>
     <script>
-// Sistema de filtros por categoria
-document.addEventListener('DOMContentLoaded', function() {
-    const categoriaBtns = document.querySelectorAll('.btn-categoria');
-    const produtos = document.querySelectorAll('.card-produto');
-    
-    categoriaBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remover active de todos os botões
-            categoriaBtns.forEach(b => b.classList.remove('active'));
-            // Adicionar active ao botão clicado
-            this.classList.add('active');
-            
-            const categoria = this.dataset.categoria;
-            
-            // Filtrar produtos
-            produtos.forEach(produto => {
-                const produtoCategoria = produto.querySelector('.produto-categoria').textContent;
-                
-                if (categoria === 'todos' || produtoCategoria === categoria) {
-                    produto.style.display = 'flex';
-                    produto.style.animation = 'fadeInUp 0.4s ease';
-                } else {
-                    produto.style.display = 'none';
-                }
+        // Sistema de filtros por categoria
+        document.addEventListener('DOMContentLoaded', function () {
+            const categoriaBtns = document.querySelectorAll('.btn-categoria');
+            const produtos = document.querySelectorAll('.card-produto');
+
+            categoriaBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remover active de todos os botões
+                    categoriaBtns.forEach(b => b.classList.remove('active'));
+                    // Adicionar active ao botão clicado
+                    this.classList.add('active');
+
+                    const categoria = this.dataset.categoria;
+
+                    // Filtrar produtos
+                    produtos.forEach(produto => {
+                        const produtoCategoria = produto.querySelector('.produto-categoria').textContent;
+
+                        if (categoria === 'todos' || produtoCategoria === categoria) {
+                            produto.style.display = 'flex';
+                            produto.style.animation = 'fadeInUp 0.4s ease';
+                        } else {
+                            produto.style.display = 'none';
+                        }
+                    });
+                });
             });
         });
-    });
-});
 
-// Animação para os produtos
-const style = document.createElement('style');
-style.textContent = `
+        // Animação para os produtos
+        const style = document.createElement('style');
+        style.textContent = `
     @keyframes fadeInUp {
         from {
             opacity: 0;
@@ -163,7 +165,8 @@ style.textContent = `
         }
     }
 `;
-document.head.appendChild(style);
-</script>
+        document.head.appendChild(style);
+    </script>
 </body>
+
 </html>

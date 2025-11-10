@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Maria do Bairro - Padaria artesanal com pães de fermentação natural e doces caseiros.">
+    <meta name="description"
+        content="Maria do Bairro - Padaria artesanal com pães de fermentação natural e doces caseiros.">
     <meta name="keywords" content="padaria, pães, doces, bolo, café, torta, Pouso Alegre, Minas Gerais">
 
     <link rel="stylesheet" href="css/style.css">
@@ -35,27 +36,30 @@
 
     <main class="main">
         <!-- HERO SECTION COM IMAGEM -->
-<section class="hero" style="background-image: url('/images/hero/index-hero.jpg');">
-    <div class="hero-content">
-        <h2>🍞 Sabor que conquista, tradição que permanece</h2>
-        <p>Há mais de 20 anos levando o verdadeiro sabor da padaria artesanal para Pouso Alegre</p>
-        <div class="hero-buttons">
-            <a href="#produtos" class="btn-hero">Conhecer Produtos</a>
-            <a href="#cardapio" class="btn-hero-outline">Ver Cardápio</a>
-        </div>
-    </div>
-</section>
+        <section class="hero" style="background-image: url('/images/hero/index-hero.jpg');">
+            <div class="hero-content">
+                <h2>🍞 Sabor que conquista, tradição que permanece</h2>
+                <p>Há mais de 20 anos levando o verdadeiro sabor da padaria artesanal para Pouso Alegre</p>
+                <div class="hero-buttons">
+                    <a href="#produtos" class="btn-hero">Conhecer Produtos</a>
+                    <a href="#cardapio" class="btn-hero-outline">Ver Cardápio</a>
+                </div>
+            </div>
+        </section>
 
         <!-- SOBRE NÓS -->
         <section class="sobre-section">
             <div class="sobre-container">
                 <div class="sobre-texto">
                     <h2>Aqui temos história e tradição...</h2>
-                    <p>Desde 2003, a Maria do Bairro mantém viva a tradição da panificação artesanal. Nossos pães são feitos com fermentação natural, seguindo receitas que passam de geração em geração.</p>
-                    <p>Cada produto é preparado com ingredientes selecionados e muito carinho, garantindo aquele sabor caseiro que remete às melhores lembranças da infância.</p>
+                    <p>Desde 2003, a Maria do Bairro mantém viva a tradição da panificação artesanal. Nossos pães são
+                        feitos com fermentação natural, seguindo receitas que passam de geração em geração.</p>
+                    <p>Cada produto é preparado com ingredientes selecionados e muito carinho, garantindo aquele sabor
+                        caseiro que remete às melhores lembranças da infância.</p>
                 </div>
                 <div class="sobre-imagem">
-                    <img src="images/ambiente/bakery-staff.jpg" alt="padeiro colocando pães para assar em forno a lenha">
+                    <img src="images/ambiente/bakery-staff.jpg"
+                        alt="padeiro colocando pães para assar em forno a lenha">
                 </div>
             </div>
         </section>
@@ -149,216 +153,218 @@
         </section>
 
         <!-- CARDÁPIO COMPLETO -->
-<section class="cardapio-section">
-    <div class="section-header">
-        <h2>📋 Cardápio Completo</h2>
-        <p>Explore todos os nossos produtos artesanais feitos com carinho</p>
-    </div>
+        <section class="cardapio-section">
+            <div class="section-header">
+                <h2>📋 Cardápio Completo</h2>
+                <p>Explore todos os nossos produtos artesanais feitos com carinho</p>
+            </div>
 
-    <!-- FILTROS POR CATEGORIA -->
-    <div class="filtros-categoria">
-        <button class="filtro-btn active" data-categoria="todos">Todos</button>
-        <button class="filtro-btn" data-categoria="paes">🥖 Pães</button>
-        <button class="filtro-btn" data-categoria="doces">🍰 Doces</button>
-        <button class="filtro-btn" data-categoria="salgados">🥐 Salgados</button>
-        <button class="filtro-btn" data-categoria="bebidas">☕ Bebidas</button>
-    </div>
+            <!-- FILTROS POR CATEGORIA -->
+            <div class="filtros-categoria">
+                <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="paes">🥖 Pães</button>
+                <button class="filtro-btn" data-categoria="doces">🍰 Doces</button>
+                <button class="filtro-btn" data-categoria="salgados">🥐 Salgados</button>
+                <button class="filtro-btn" data-categoria="bebidas">☕ Bebidas</button>
+            </div>
 
-    <!-- CARDÁPIO EM CARDS -->
-    <div class="cardapio-container">
-        <!-- PÃES -->
-        <div class="categoria-produtos" data-categoria="paes">
-            <h3 class="categoria-titulo">🥖 Pães Artesanais</h3>
-            <div class="produtos-grid">
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/pao-frances.jpg" alt="Pão Francês">
-                    <div class="produto-info-cardapio">
-                        <h4>Pão Francês</h4>
-                        <p class="produto-descricao-cardapio">Fermentação natural, crocante por fora e macio por dentro</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 0,50</span>
-                            <button onclick="adicionarAoCarrinhoHome(1)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
+            <!-- CARDÁPIO EM CARDS -->
+            <div class="cardapio-container">
+                <!-- PÃES -->
+                <div class="categoria-produtos" data-categoria="paes">
+                    <h3 class="categoria-titulo">🥖 Pães Artesanais</h3>
+                    <div class="produtos-grid">
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/pao-frances.jpg" alt="Pão Francês">
+                            <div class="produto-info-cardapio">
+                                <h4>Pão Francês</h4>
+                                <p class="produto-descricao-cardapio">Fermentação natural, crocante por fora e macio por
+                                    dentro</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 0,50</span>
+                                    <button onclick="adicionarAoCarrinhoHome(1)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/pao-doce.jpg" alt="Pão Doce">
+                            <div class="produto-info-cardapio">
+                                <h4>Pão Doce</h4>
+                                <p class="produto-descricao-cardapio">Farinha, açúcar e água - perfeito para o café da
+                                    manhã</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 1,00</span>
+                                    <button onclick="adicionarAoCarrinhoHome(2)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/pao-integral.jpg" alt="Pão Integral">
+                            <div class="produto-info-cardapio">
+                                <h4>Pão Integral</h4>
+                                <p class="produto-descricao-cardapio">Farinha integral e grãos selecionados</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 3,50</span>
+                                    <button onclick="adicionarAoCarrinhoHome(3)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/pao-doce.jpg" alt="Pão Doce">
-                    <div class="produto-info-cardapio">
-                        <h4>Pão Doce</h4>
-                        <p class="produto-descricao-cardapio">Farinha, açúcar e água - perfeito para o café da manhã</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 1,00</span>
-                            <button onclick="adicionarAoCarrinhoHome(2)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
+                <!-- DOCES -->
+                <div class="categoria-produtos" data-categoria="doces">
+                    <h3 class="categoria-titulo">🍰 Doces e Bolos</h3>
+                    <div class="produtos-grid">
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/bolo-de-chocolate.jpg" alt="Bolo de Chocolate">
+                            <div class="produto-info-cardapio">
+                                <h4>Bolo de Chocolate</h4>
+                                <p class="produto-descricao-cardapio">Chocolate e especiarias - irresistível</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 5,00</span>
+                                    <button onclick="adicionarAoCarrinhoHome(5)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/torta-de-morango.jpg" alt="Torta de Morango">
+                            <div class="produto-info-cardapio">
+                                <h4>Torta de Morango</h4>
+                                <p class="produto-descricao-cardapio">Morangos selecionados e creme belga</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 6,50</span>
+                                    <button onclick="adicionarAoCarrinhoHome(6)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/sonho-de-creme.jpg" alt="Sonho de Creme">
+                            <div class="produto-info-cardapio">
+                                <h4>Sonho de Creme</h4>
+                                <p class="produto-descricao-cardapio">Creme de ovos, extrato de baunilha e leite</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 7,00</span>
+                                    <button onclick="adicionarAoCarrinhoHome(7)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/cupcake.jpg" alt="Cupcake">
+                            <div class="produto-info-cardapio">
+                                <h4>Cupcake</h4>
+                                <p class="produto-descricao-cardapio">Bolinho sabores variados</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 7,50</span>
+                                    <button onclick="adicionarAoCarrinhoHome(8)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/pao-integral.jpg" alt="Pão Integral">
-                    <div class="produto-info-cardapio">
-                        <h4>Pão Integral</h4>
-                        <p class="produto-descricao-cardapio">Farinha integral e grãos selecionados</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 3,50</span>
-                            <button onclick="adicionarAoCarrinhoHome(3)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
+                <!-- SALGADOS -->
+                <div class="categoria-produtos" data-categoria="salgados">
+                    <h3 class="categoria-titulo">🥐 Salgados</h3>
+                    <div class="produtos-grid">
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/pao-de-queijo.jpg" alt="Pão de Queijo">
+                            <div class="produto-info-cardapio">
+                                <h4>Pão de Queijo</h4>
+                                <p class="produto-descricao-cardapio">Tapioca e queijo parmesão - tradição mineira</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 4,00</span>
+                                    <button onclick="adicionarAoCarrinhoHome(4)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BEBIDAS -->
+                <div class="categoria-produtos" data-categoria="bebidas">
+                    <h3 class="categoria-titulo">☕ Bebidas</h3>
+                    <div class="produtos-grid">
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/cafe-espresso.jpg" alt="Café Expresso">
+                            <div class="produto-info-cardapio">
+                                <h4>Café Expresso</h4>
+                                <p class="produto-descricao-cardapio">Grãos especiais - energia pura</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 0,50</span>
+                                    <button onclick="adicionarAoCarrinhoHome(9)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/cafe-latte.jpg" alt="Café Latte">
+                            <div class="produto-info-cardapio">
+                                <h4>Café Latte</h4>
+                                <p class="produto-descricao-cardapio">Café expresso e leite integral</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 2,00</span>
+                                    <button onclick="adicionarAoCarrinhoHome(10)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/cafe-capuccino.jpg" alt="Capuccino">
+                            <div class="produto-info-cardapio">
+                                <h4>Capuccino</h4>
+                                <p class="produto-descricao-cardapio">Café, leite, canela e chocolate</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 4,50</span>
+                                    <button onclick="adicionarAoCarrinhoHome(11)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-produto-cardapio">
+                            <img src="images/produtos/chocolate-quente.jpg" alt="Chocolate Quente">
+                            <div class="produto-info-cardapio">
+                                <h4>Chocolate Quente</h4>
+                                <p class="produto-descricao-cardapio">Chocolate ao leite cremoso</p>
+                                <div class="produto-preco-cardapio">
+                                    <span class="preco">R$ 5,00</span>
+                                    <button onclick="adicionarAoCarrinhoHome(12)" class="btn-adicionar-cardapio">
+                                        + Adicionar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- DOCES -->
-        <div class="categoria-produtos" data-categoria="doces">
-            <h3 class="categoria-titulo">🍰 Doces e Bolos</h3>
-            <div class="produtos-grid">
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/bolo-de-chocolate.jpg" alt="Bolo de Chocolate">
-                    <div class="produto-info-cardapio">
-                        <h4>Bolo de Chocolate</h4>
-                        <p class="produto-descricao-cardapio">Chocolate e especiarias - irresistível</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 5,00</span>
-                            <button onclick="adicionarAoCarrinhoHome(5)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/torta-de-morango.jpg" alt="Torta de Morango">
-                    <div class="produto-info-cardapio">
-                        <h4>Torta de Morango</h4>
-                        <p class="produto-descricao-cardapio">Morangos selecionados e creme belga</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 6,50</span>
-                            <button onclick="adicionarAoCarrinhoHome(6)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/sonho-de-creme.jpg" alt="Sonho de Creme">
-                    <div class="produto-info-cardapio">
-                        <h4>Sonho de Creme</h4>
-                        <p class="produto-descricao-cardapio">Creme de ovos, extrato de baunilha e leite</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 7,00</span>
-                            <button onclick="adicionarAoCarrinhoHome(7)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/cupcake.jpg" alt="Cupcake">
-                    <div class="produto-info-cardapio">
-                        <h4>Cupcake</h4>
-                        <p class="produto-descricao-cardapio">Bolinho sabores variados</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 7,50</span>
-                            <button onclick="adicionarAoCarrinhoHome(8)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SALGADOS -->
-        <div class="categoria-produtos" data-categoria="salgados">
-            <h3 class="categoria-titulo">🥐 Salgados</h3>
-            <div class="produtos-grid">
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/pao-de-queijo.jpg" alt="Pão de Queijo">
-                    <div class="produto-info-cardapio">
-                        <h4>Pão de Queijo</h4>
-                        <p class="produto-descricao-cardapio">Tapioca e queijo parmesão - tradição mineira</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 4,00</span>
-                            <button onclick="adicionarAoCarrinhoHome(4)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- BEBIDAS -->
-        <div class="categoria-produtos" data-categoria="bebidas">
-            <h3 class="categoria-titulo">☕ Bebidas</h3>
-            <div class="produtos-grid">
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/cafe-espresso.jpg" alt="Café Expresso">
-                    <div class="produto-info-cardapio">
-                        <h4>Café Expresso</h4>
-                        <p class="produto-descricao-cardapio">Grãos especiais - energia pura</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 0,50</span>
-                            <button onclick="adicionarAoCarrinhoHome(9)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/cafe-latte.jpg" alt="Café Latte">
-                    <div class="produto-info-cardapio">
-                        <h4>Café Latte</h4>
-                        <p class="produto-descricao-cardapio">Café expresso e leite integral</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 2,00</span>
-                            <button onclick="adicionarAoCarrinhoHome(10)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/cafe-capuccino.jpg" alt="Capuccino">
-                    <div class="produto-info-cardapio">
-                        <h4>Capuccino</h4>
-                        <p class="produto-descricao-cardapio">Café, leite, canela e chocolate</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 4,50</span>
-                            <button onclick="adicionarAoCarrinhoHome(11)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-produto-cardapio">
-                    <img src="images/produtos/chocolate-quente.jpg" alt="Chocolate Quente">
-                    <div class="produto-info-cardapio">
-                        <h4>Chocolate Quente</h4>
-                        <p class="produto-descricao-cardapio">Chocolate ao leite cremoso</p>
-                        <div class="produto-preco-cardapio">
-                            <span class="preco">R$ 5,00</span>
-                            <button onclick="adicionarAoCarrinhoHome(12)" class="btn-adicionar-cardapio">
-                                + Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- VÍDEO -->
         <section class="video-section">
@@ -381,39 +387,39 @@
                     <h2>🕒 Horários de Funcionamento</h2>
                     <div class="tabela-horarios">
                         <table>
-                            
-                <thead>
-                    <tr>
-                        <th>Dias</th>
-                        <th>Horários</th>
-                    </tr>
-                </thead>
 
-                <tbody>
-                    <tr>
-                        <td>Segunda à Sexta</td>
-                        <td>6h às 19h</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Sábado</td>
-                        <td>6h às 17h</td>
-                    </tr>
-                    <tr>
-                        <td>Domingo</td>
-                        <td>6h às 15h</td>
-                    </tr>
-                    <tr>
-                        <td>Feriados</td>
-                        <td>6h às 12h</td>
-                    </tr>
-                </tbody>
+                            <thead>
+                                <tr>
+                                    <th>Dias</th>
+                                    <th>Horários</th>
+                                </tr>
+                            </thead>
 
-            
+                            <tbody>
+                                <tr>
+                                    <td>Segunda à Sexta</td>
+                                    <td>6h às 19h</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Sábado</td>
+                                    <td>6h às 17h</td>
+                                </tr>
+                                <tr>
+                                    <td>Domingo</td>
+                                    <td>6h às 15h</td>
+                                </tr>
+                                <tr>
+                                    <td>Feriados</td>
+                                    <td>6h às 12h</td>
+                                </tr>
+                            </tbody>
+
+
                         </table>
                     </div>
                 </div>
-                
+
                 <div class="localizacao-info">
                     <h2>📍 Como Chegar</h2>
                     <div class="endereco">
@@ -458,84 +464,85 @@
 
     <script src="js/system.js"></script>
     <script>
-    function adicionarAoCarrinhoHome(idProduto) {
-        adicionarAoCarrinho(idProduto);
-        atualizarCarrinhoHome();
-    }
-    
-    function atualizarCarrinhoHome() {
-        if (typeof carrinho !== 'undefined') {
-            const totalItens = carrinho.reduce((total, item) => total + item.quantidade, 0);
-            const total = carrinho.reduce((total, item) => total + (item.preco * item.quantidade), 0);
-            
-            const itensHome = document.getElementById('itensHome');
-            const totalHome = document.getElementById('totalHome');
-            
-            if (itensHome) itensHome.textContent = totalItens;
-            if (totalHome) totalHome.textContent = formatarMoeda(total);
+        function adicionarAoCarrinhoHome(idProduto) {
+            adicionarAoCarrinho(idProduto);
+            atualizarCarrinhoHome();
         }
-    }
-    
-    // Atualizar a cada segundo
-    setInterval(atualizarCarrinhoHome, 1000);
-    
-    // Inicializar
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(atualizarCarrinhoHome, 500);
-    });
+
+        function atualizarCarrinhoHome() {
+            if (typeof carrinho !== 'undefined') {
+                const totalItens = carrinho.reduce((total, item) => total + item.quantidade, 0);
+                const total = carrinho.reduce((total, item) => total + (item.preco * item.quantidade), 0);
+
+                const itensHome = document.getElementById('itensHome');
+                const totalHome = document.getElementById('totalHome');
+
+                if (itensHome) itensHome.textContent = totalItens;
+                if (totalHome) totalHome.textContent = formatarMoeda(total);
+            }
+        }
+
+        // Atualizar a cada segundo
+        setInterval(atualizarCarrinhoHome, 1000);
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(atualizarCarrinhoHome, 500);
+        });
     </script>
     <script>
-// Sistema de filtros do cardápio
-document.addEventListener('DOMContentLoaded', function() {
-    const filtroBtns = document.querySelectorAll('.filtro-btn');
-    const categoriasProdutos = document.querySelectorAll('.categoria-produtos');
-    
-    filtroBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remover active de todos os botões
-            filtroBtns.forEach(b => b.classList.remove('active'));
-            // Adicionar active ao botão clicado
-            this.classList.add('active');
-            
-            const categoria = this.dataset.categoria;
-            
-            // Mostrar/ocultar categorias
-            categoriasProdutos.forEach(categoriaEl => {
-                if (categoria === 'todos' || categoriaEl.dataset.categoria === categoria) {
-                    categoriaEl.style.display = 'block';
-                    categoriaEl.style.animation = 'fadeInUp 0.6s ease';
-                } else {
-                    categoriaEl.style.display = 'none';
-                }
+        // Sistema de filtros do cardápio
+        document.addEventListener('DOMContentLoaded', function () {
+            const filtroBtns = document.querySelectorAll('.filtro-btn');
+            const categoriasProdutos = document.querySelectorAll('.categoria-produtos');
+
+            filtroBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remover active de todos os botões
+                    filtroBtns.forEach(b => b.classList.remove('active'));
+                    // Adicionar active ao botão clicado
+                    this.classList.add('active');
+
+                    const categoria = this.dataset.categoria;
+
+                    // Mostrar/ocultar categorias
+                    categoriasProdutos.forEach(categoriaEl => {
+                        if (categoria === 'todos' || categoriaEl.dataset.categoria === categoria) {
+                            categoriaEl.style.display = 'block';
+                            categoriaEl.style.animation = 'fadeInUp 0.6s ease';
+                        } else {
+                            categoriaEl.style.display = 'none';
+                        }
+                    });
+                });
             });
         });
-    });
-});
 
-// Atualizar IDs dos produtos para corresponder ao carrinho.js
-function adicionarAoCarrinhoHome(idProduto) {
-    // Mapear os IDs dos produtos do cardápio para os IDs do carrinho.js
-    const mapeamentoIds = {
-        1: 1,  // Pão Francês
-        2: 2,  // Pão Doce
-        3: 3,  // Pão Integral
-        4: 4,  // Pão de Queijo
-        5: 5,  // Bolo de Chocolate
-        6: 6,  // Torta de Morango
-        7: 7,  // Sonho de Creme
-        8: 8,  // Cupcake
-        9: 9,  // Café Expresso
-        10: 10, // Café Latte
-        11: 11, // Capuccino
-        12: 12  // Chocolate Quente
-    };
-    
-    const idReal = mapeamentoIds[idProduto];
-    if (idReal && typeof adicionarAoCarrinho === 'function') {
-        adicionarAoCarrinho(idReal);
-        atualizarCarrinhoHome();
-    }
-}
-</script>
+        // Atualizar IDs dos produtos para corresponder ao carrinho.js
+        function adicionarAoCarrinhoHome(idProduto) {
+            // Mapear os IDs dos produtos do cardápio para os IDs do carrinho.js
+            const mapeamentoIds = {
+                1: 1,  // Pão Francês
+                2: 2,  // Pão Doce
+                3: 3,  // Pão Integral
+                4: 4,  // Pão de Queijo
+                5: 5,  // Bolo de Chocolate
+                6: 6,  // Torta de Morango
+                7: 7,  // Sonho de Creme
+                8: 8,  // Cupcake
+                9: 9,  // Café Expresso
+                10: 10, // Café Latte
+                11: 11, // Capuccino
+                12: 12  // Chocolate Quente
+            };
+
+            const idReal = mapeamentoIds[idProduto];
+            if (idReal && typeof adicionarAoCarrinho === 'function') {
+                adicionarAoCarrinho(idReal);
+                atualizarCarrinhoHome();
+            }
+        }
+    </script>
 </body>
+
 </html>

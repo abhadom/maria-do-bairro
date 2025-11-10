@@ -32,13 +32,13 @@
     <main class="main">
         <!-- HERO SECTION PARA PEDIDOS -->
         <section class="hero" style="background-image: url('/images/hero/pedidos-hero.jpg');">
-    <div class="hero-overlay">
-        <div class="hero-content">
-            <h2>🎂 Faça seu Pedido Especial</h2>
-            <p>Bolos, tortas e salgados personalizados para suas celebrações</p>
-        </div>
-    </div>
-</section>
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h2>🎂 Faça seu Pedido Especial</h2>
+                    <p>Bolos, tortas e salgados personalizados para suas celebrações</p>
+                </div>
+            </div>
+        </section>
 
         <!-- INFO RÁPIDA -->
         <section class="info-rapida">
@@ -61,142 +61,140 @@
             </div>
         </section>
 
-       <!-- FORMULÁRIO DE PEDIDOS SIMPLIFICADO -->
-<section class="form-section-pedidos">
-    <div class="section-header">
-        <h2>📝 Faça seu Pedido Especial</h2>
-        <p>Preencha os detalhes do seu pedido personalizado</p>
-    </div>
-
-    <form action="#" method="post" class="order-form">
-
-        <fieldset>
-            <legend>👤 Seus Dados</legend>
-            
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="nome">Nome completo: *</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
-                </div>
-
-                <div class="form-group">
-                    <label for="telefone">Telefone: *</label>
-                    <input type="tel" id="telefone" name="telefone" required 
-                           placeholder="(11) 99999-9999">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">E-mail: *</label>
-                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
-                </div>
+        <!-- FORMULÁRIO DE PEDIDOS SIMPLIFICADO -->
+        <section class="form-section-pedidos">
+            <div class="section-header">
+                <h2>📝 Faça seu Pedido Especial</h2>
+                <p>Preencha os detalhes do seu pedido personalizado</p>
             </div>
-        </fieldset>
 
-        <fieldset>
-            <legend>🎂 Seu Pedido</legend>
-            
-            <!-- TIPO DE PRODUTO - CORRIGIDO -->
-            <div class="form-group">
-                <label class="form-label">O que você gostaria? *</label>
-                <div class="radio-group-horizontal">
-                    <label class="radio-option">
-                        <input type="radio" name="tipoProduto" value="bolo" required>
-                        <div class="radio-custom">
-                            <span class="radio-icon">🍰</span>
-                            <span class="radio-text">Bolo</span>
+            <form action="#" method="post" class="order-form">
+
+                <fieldset>
+                    <legend>👤 Seus Dados</legend>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nome">Nome completo: *</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
                         </div>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="tipoProduto" value="torta">
-                        <div class="radio-custom">
-                            <span class="radio-icon">🥧</span>
-                            <span class="radio-text">Torta</span>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone: *</label>
+                            <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
                         </div>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="tipoProduto" value="salgados">
-                        <div class="radio-custom">
-                            <span class="radio-icon">🥐</span>
-                            <span class="radio-text">Salgados</span>
+
+                        <div class="form-group">
+                            <label for="email">E-mail: *</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
                         </div>
-                    </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>🎂 Seu Pedido</legend>
+
+                    <!-- TIPO DE PRODUTO - CORRIGIDO -->
+                    <div class="form-group">
+                        <label class="form-label">O que você gostaria? *</label>
+                        <div class="radio-group-horizontal">
+                            <label class="radio-option">
+                                <input type="radio" name="tipoProduto" value="bolo" required>
+                                <div class="radio-custom">
+                                    <span class="radio-icon">🍰</span>
+                                    <span class="radio-text">Bolo</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="tipoProduto" value="torta">
+                                <div class="radio-custom">
+                                    <span class="radio-icon">🥧</span>
+                                    <span class="radio-text">Torta</span>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="tipoProduto" value="salgados">
+                                <div class="radio-custom">
+                                    <span class="radio-icon">🥐</span>
+                                    <span class="radio-text">Salgados</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- SABORES DINÂMICOS -->
+                    <div class="form-group" id="sabor-group">
+                        <label for="sabor">Sabor preferido: *</label>
+                        <select id="sabor" name="sabor" required>
+                            <option value="">-- Primeiro escolha o tipo de produto --</option>
+                        </select>
+                    </div>
+
+                    <!-- TAMANHO - CORRIGIDO -->
+                    <div class="form-group">
+                        <label class="form-label">Tamanho: *</label>
+                        <div class="radio-group-horizontal">
+                            <label class="radio-option">
+                                <input type="radio" name="tamanho" value="pequeno" required>
+                                <div class="radio-custom">
+                                    <span class="radio-text">Pequeno</span>
+                                    <small>Até 8 pessoas</small>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="tamanho" value="medio">
+                                <div class="radio-custom">
+                                    <span class="radio-text">Médio</span>
+                                    <small>8-15 pessoas</small>
+                                </div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="tamanho" value="grande">
+                                <div class="radio-custom">
+                                    <span class="radio-text">Grande</span>
+                                    <small>15+ pessoas</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dataEntrega">Quando precisa? *</label>
+                        <input type="date" id="dataEntrega" name="dataEntrega" required>
+                        <small class="form-help">Pedimos pelo menos 2 dias de antecedência</small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>💡 Algum detalhe especial?</legend>
+
+                    <div class="form-group">
+                        <label for="observacoes">Observações (opcional):</label>
+                        <textarea id="observacoes" name="observacoes"
+                            placeholder="Ex: Para festa de aniversário, sem lactose, cor azul, etc."
+                            rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="orcamento">Seu orçamento (opcional):</label>
+                        <div class="input-with-symbol">
+                            <span class="input-symbol">R$</span>
+                            <input type="number" id="orcamento" name="orcamento" min="0" step="0.01" placeholder="0.00">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit-pedido">
+                        <span class="btn-icon">✨</span>
+                        Enviar Pedido
+                    </button>
+                    <p class="form-note">
+                        📞 Retornaremos em até 24h para confirmar todos os detalhes!
+                    </p>
                 </div>
-            </div>
-
-            <!-- SABORES DINÂMICOS -->
-            <div class="form-group" id="sabor-group">
-                <label for="sabor">Sabor preferido: *</label>
-                <select id="sabor" name="sabor" required>
-                    <option value="">-- Primeiro escolha o tipo de produto --</option>
-                </select>
-            </div>
-
-            <!-- TAMANHO - CORRIGIDO -->
-            <div class="form-group">
-                <label class="form-label">Tamanho: *</label>
-                <div class="radio-group-horizontal">
-                    <label class="radio-option">
-                        <input type="radio" name="tamanho" value="pequeno" required>
-                        <div class="radio-custom">
-                            <span class="radio-text">Pequeno</span>
-                            <small>Até 8 pessoas</small>
-                        </div>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="tamanho" value="medio">
-                        <div class="radio-custom">
-                            <span class="radio-text">Médio</span>
-                            <small>8-15 pessoas</small>
-                        </div>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="tamanho" value="grande">
-                        <div class="radio-custom">
-                            <span class="radio-text">Grande</span>
-                            <small>15+ pessoas</small>
-                        </div>
-                    </label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="dataEntrega">Quando precisa? *</label>
-                <input type="date" id="dataEntrega" name="dataEntrega" required>
-                <small class="form-help">Pedimos pelo menos 2 dias de antecedência</small>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>💡 Algum detalhe especial?</legend>
-            
-            <div class="form-group">
-                <label for="observacoes">Observações (opcional):</label>
-                <textarea id="observacoes" name="observacoes" 
-                          placeholder="Ex: Para festa de aniversário, sem lactose, cor azul, etc."
-                          rows="3"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="orcamento">Seu orçamento (opcional):</label>
-                <div class="input-with-symbol">
-                    <span class="input-symbol">R$</span>
-                    <input type="number" id="orcamento" name="orcamento" min="0" step="0.01" 
-                           placeholder="0.00">
-                </div>
-            </div>
-        </fieldset>
-
-        <div class="form-actions">
-            <button type="submit" class="btn-submit-pedido">
-                <span class="btn-icon">✨</span>
-                Enviar Pedido
-            </button>
-            <p class="form-note">
-                📞 Retornaremos em até 24h para confirmar todos os detalhes!
-            </p>
-        </div>
-    </form>
-</section>
+            </form>
+        </section>
 
         <!-- FAQ RÁPIDO -->
         <section class="faq-pedidos">
@@ -206,11 +204,13 @@
             <div class="faq-grid">
                 <div class="faq-item">
                     <h4>Quanto tempo de antecedência devo pedir?</h4>
-                    <p>Recomendamos pelo menos 2 dias úteis para bolos e tortas simples, e 3-4 dias para pedidos mais elaborados.</p>
+                    <p>Recomendamos pelo menos 2 dias úteis para bolos e tortas simples, e 3-4 dias para pedidos mais
+                        elaborados.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Posso personalizar cores e temas?</h4>
-                    <p>Sim! Traga sua ideia e nós criamos. Temos opções de decoração para aniversários, casamentos e datas especiais.</p>
+                    <p>Sim! Traga sua ideia e nós criamos. Temos opções de decoração para aniversários, casamentos e
+                        datas especiais.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Fazem entregas?</h4>
@@ -232,160 +232,160 @@
     </footer>
 
     <script>
-    // Script para melhorar a experiência do formulário
-    document.addEventListener('DOMContentLoaded', function() {
-        // Configurar data mínima (caso o PHP não funcione)
-        const dataInput = document.getElementById('dataEntrega');
-        if (dataInput && !dataInput.getAttribute('min')) {
-            const hoje = new Date();
-            const amanha = new Date(hoje);
-            amanha.setDate(hoje.getDate() + 2); // Mínimo 2 dias
-            dataInput.min = amanha.toISOString().split('T')[0];
-        }
+        // Script para melhorar a experiência do formulário
+        document.addEventListener('DOMContentLoaded', function () {
+            // Configurar data mínima (caso o PHP não funcione)
+            const dataInput = document.getElementById('dataEntrega');
+            if (dataInput && !dataInput.getAttribute('min')) {
+                const hoje = new Date();
+                const amanha = new Date(hoje);
+                amanha.setDate(hoje.getDate() + 2); // Mínimo 2 dias
+                dataInput.min = amanha.toISOString().split('T')[0];
+            }
 
-        // Validação de telefone em tempo real
-        const telefoneInput = document.getElementById('telefone');
-        if (telefoneInput) {
-            telefoneInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length > 11) value = value.substring(0, 11);
-                
-                if (value.length > 0) {
-                    value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
-                    if (value.length > 10) {
-                        value = value.replace(/(\d{5})(\d)/, '$1-$2');
+            // Validação de telefone em tempo real
+            const telefoneInput = document.getElementById('telefone');
+            if (telefoneInput) {
+                telefoneInput.addEventListener('input', function (e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 11) value = value.substring(0, 11);
+
+                    if (value.length > 0) {
+                        value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+                        if (value.length > 10) {
+                            value = value.replace(/(\d{5})(\d)/, '$1-$2');
+                        }
                     }
-                }
-                e.target.value = value;
-            });
-        }
-    });
+                    e.target.value = value;
+                });
+            }
+        });
     </script>
     <script>
-// Sistema de sabores dinâmicos
-document.addEventListener('DOMContentLoaded', function() {
-    const tipoProdutoRadios = document.querySelectorAll('input[name="tipoProduto"]');
-    const saborSelect = document.getElementById('sabor');
-    
-    // Sabores para cada tipo de produto
-    const sabores = {
-        bolo: [
-            { value: 'chocolate', text: 'Chocolate' },
-            { value: 'baunilha', text: 'Baunilha' },
-            { value: 'morango', text: 'Morango' },
-            { value: 'cenoura', text: 'Cenoura com Chocolate' },
-            { value: 'limao', text: 'Limão Siciliano' },
-            { value: 'coco', text: 'Coco Queimado' },
-            { value: 'prestigio', text: 'Prestígio' },
-            { value: 'ninho', text: 'Ninho com Nutella' }
-        ],
-        torta: [
-            { value: 'morango', text: 'Torta de Morango' },
-            { value: 'limao', text: 'Torta de Limão' },
-            { value: 'chocolate', text: 'Torta de Chocolate' },
-            { value: 'romeu-julieta', text: 'Romeu e Julieta' },
-            { value: 'creme', text: 'Torta de Creme' },
-            { value: 'frutas-vermelhas', text: 'Frutas Vermelhas' }
-        ],
-        salgados: [
-            { value: 'torta-salada', text: 'Torta de Frango' },
-            { value: 'empada', text: 'Empada' },
-            { value: 'quiche', text: 'Quiche' },
-            { value: 'folhado', text: 'Folhados Diversos' },
-            { value: 'coxinha', text: 'Coxinha' },
-            { value: 'kibe', text: 'Kibe' },
-            { value: 'bolinha-queijo', text: 'Bolinha de Queijo' }
-        ]
-    };
+        // Sistema de sabores dinâmicos
+        document.addEventListener('DOMContentLoaded', function () {
+            const tipoProdutoRadios = document.querySelectorAll('input[name="tipoProduto"]');
+            const saborSelect = document.getElementById('sabor');
 
-    // Atualizar sabores quando o tipo mudar
-    tipoProdutoRadios.forEach(radio => {
-        radio.addEventListener('change', function() {
-            if (this.checked) {
-                const tipo = this.value;
-                const saboresTipo = sabores[tipo] || [];
-                
-                // Limpar e popular o select
-                saborSelect.innerHTML = '<option value="">-- Escolha o sabor --</option>';
-                
-                saboresTipo.forEach(sabor => {
-                    const option = document.createElement('option');
-                    option.value = sabor.value;
-                    option.textContent = sabor.text;
-                    saborSelect.appendChild(option);
+            // Sabores para cada tipo de produto
+            const sabores = {
+                bolo: [
+                    { value: 'chocolate', text: 'Chocolate' },
+                    { value: 'baunilha', text: 'Baunilha' },
+                    { value: 'morango', text: 'Morango' },
+                    { value: 'cenoura', text: 'Cenoura com Chocolate' },
+                    { value: 'limao', text: 'Limão Siciliano' },
+                    { value: 'coco', text: 'Coco Queimado' },
+                    { value: 'prestigio', text: 'Prestígio' },
+                    { value: 'ninho', text: 'Ninho com Nutella' }
+                ],
+                torta: [
+                    { value: 'morango', text: 'Torta de Morango' },
+                    { value: 'limao', text: 'Torta de Limão' },
+                    { value: 'chocolate', text: 'Torta de Chocolate' },
+                    { value: 'romeu-julieta', text: 'Romeu e Julieta' },
+                    { value: 'creme', text: 'Torta de Creme' },
+                    { value: 'frutas-vermelhas', text: 'Frutas Vermelhas' }
+                ],
+                salgados: [
+                    { value: 'torta-salada', text: 'Torta de Frango' },
+                    { value: 'empada', text: 'Empada' },
+                    { value: 'quiche', text: 'Quiche' },
+                    { value: 'folhado', text: 'Folhados Diversos' },
+                    { value: 'coxinha', text: 'Coxinha' },
+                    { value: 'kibe', text: 'Kibe' },
+                    { value: 'bolinha-queijo', text: 'Bolinha de Queijo' }
+                ]
+            };
+
+            // Atualizar sabores quando o tipo mudar
+            tipoProdutoRadios.forEach(radio => {
+                radio.addEventListener('change', function () {
+                    if (this.checked) {
+                        const tipo = this.value;
+                        const saboresTipo = sabores[tipo] || [];
+
+                        // Limpar e popular o select
+                        saborSelect.innerHTML = '<option value="">-- Escolha o sabor --</option>';
+
+                        saboresTipo.forEach(sabor => {
+                            const option = document.createElement('option');
+                            option.value = sabor.value;
+                            option.textContent = sabor.text;
+                            saborSelect.appendChild(option);
+                        });
+
+                        // Mostrar o grupo de sabores
+                        document.getElementById('sabor-group').style.display = 'block';
+                    }
                 });
-                
-                // Mostrar o grupo de sabores
-                document.getElementById('sabor-group').style.display = 'block';
-            }
-        });
-    });
+            });
 
-    // Configurar data mínima
-    const dataInput = document.getElementById('dataEntrega');
-    if (dataInput) {
-        const hoje = new Date();
-        const amanha = new Date(hoje);
-        amanha.setDate(hoje.getDate() + 2);
-        dataInput.min = amanha.toISOString().split('T')[0];
-        
-        // Placeholder para data
-        dataInput.addEventListener('focus', function() {
-            this.type = 'date';
-        });
-    }
+            // Configurar data mínima
+            const dataInput = document.getElementById('dataEntrega');
+            if (dataInput) {
+                const hoje = new Date();
+                const amanha = new Date(hoje);
+                amanha.setDate(hoje.getDate() + 2);
+                dataInput.min = amanha.toISOString().split('T')[0];
 
-    // Formatação de telefone
-    const telefoneInput = document.getElementById('telefone');
-    if (telefoneInput) {
-        telefoneInput.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 11) value = value.substring(0, 11);
-            
-            if (value.length > 0) {
-                value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
-                if (value.length > 10) {
-                    value = value.replace(/(\d{5})(\d)/, '$1-$2');
-                }
+                // Placeholder para data
+                dataInput.addEventListener('focus', function () {
+                    this.type = 'date';
+                });
             }
-            e.target.value = value;
-        });
-    }
 
-    // Validação do formulário
-    const form = document.querySelector('.order-form');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validações básicas
-            const tipoSelecionado = document.querySelector('input[name="tipoProduto"]:checked');
-            const saborSelecionado = saborSelect.value;
-            const tamanhoSelecionado = document.querySelector('input[name="tamanho"]:checked');
-            
-            if (!tipoSelecionado) {
-                alert('Por favor, escolha o tipo de produto');
-                return;
+            // Formatação de telefone
+            const telefoneInput = document.getElementById('telefone');
+            if (telefoneInput) {
+                telefoneInput.addEventListener('input', function (e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 11) value = value.substring(0, 11);
+
+                    if (value.length > 0) {
+                        value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+                        if (value.length > 10) {
+                            value = value.replace(/(\d{5})(\d)/, '$1-$2');
+                        }
+                    }
+                    e.target.value = value;
+                });
             }
-            
-            if (!saborSelecionado) {
-                alert('Por favor, escolha o sabor');
-                return;
+
+            // Validação do formulário
+            const form = document.querySelector('.order-form');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Validações básicas
+                    const tipoSelecionado = document.querySelector('input[name="tipoProduto"]:checked');
+                    const saborSelecionado = saborSelect.value;
+                    const tamanhoSelecionado = document.querySelector('input[name="tamanho"]:checked');
+
+                    if (!tipoSelecionado) {
+                        alert('Por favor, escolha o tipo de produto');
+                        return;
+                    }
+
+                    if (!saborSelecionado) {
+                        alert('Por favor, escolha o sabor');
+                        return;
+                    }
+
+                    if (!tamanhoSelecionado) {
+                        alert('Por favor, escolha o tamanho');
+                        return;
+                    }
+
+                    // Se tudo estiver ok, mostrar confirmação
+                    alert('🎉 Pedido enviado com sucesso! Entraremos em contato em breve.');
+                    form.reset();
+                    saborSelect.innerHTML = '<option value="">-- Primeiro escolha o tipo de produto --</option>';
+                });
             }
-            
-            if (!tamanhoSelecionado) {
-                alert('Por favor, escolha o tamanho');
-                return;
-            }
-            
-            // Se tudo estiver ok, mostrar confirmação
-            alert('🎉 Pedido enviado com sucesso! Entraremos em contato em breve.');
-            form.reset();
-            saborSelect.innerHTML = '<option value="">-- Primeiro escolha o tipo de produto --</option>';
         });
-    }
-});
-</script>
+    </script>
 </body>
 
 </html>

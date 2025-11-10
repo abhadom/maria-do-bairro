@@ -1,6 +1,3 @@
-// js/carrinho.js - VERSÃO COMPLETA E LIMPA
-
-// 🎯 DADOS DOS PRODUTOS
 const produtosPadaria = [
     {
         id: 1,
@@ -104,7 +101,7 @@ function aplicarDesconto(subtotal, quantidade) {
 // 🎯 FUNÇÕES DO CARRINHO
 function adicionarAoCarrinho(idProduto) {
     const produto = produtosPadaria.find(p => p.id === idProduto);
-    
+
     if (!produto) {
         mostrarMensagem('❌ Produto não encontrado!', 'erro');
         return;
@@ -117,7 +114,7 @@ function adicionarAoCarrinho(idProduto) {
 
     // Verificar se já está no carrinho
     const itemExistente = carrinho.find(item => item.id === idProduto);
-    
+
     if (itemExistente) {
         itemExistente.quantidade += 1;
     } else {
@@ -126,22 +123,22 @@ function adicionarAoCarrinho(idProduto) {
             quantidade: 1
         });
     }
-    
+
     // Atualizar estoque
     produto.estoque -= 1;
-    
+
     atualizarInterface();
     mostrarMensagem(`✅ ${produto.nome} adicionado ao carrinho!`, 'sucesso');
 }
 
 function removerDoCarrinho(idProduto) {
     const item = carrinho.find(item => item.id === idProduto);
-    
+
     if (item) {
         // Devolver ao estoque
         const produto = produtosPadaria.find(p => p.id === idProduto);
         produto.estoque += item.quantidade;
-        
+
         carrinho = carrinho.filter(item => item.id !== idProduto);
         atualizarInterface();
         mostrarMensagem(`🗑️ ${item.nome} removido do carrinho!`, 'info');
@@ -151,20 +148,20 @@ function removerDoCarrinho(idProduto) {
 function alterarQuantidade(idProduto, novaQuantidade) {
     const item = carrinho.find(item => item.id === idProduto);
     const produto = produtosPadaria.find(p => p.id === idProduto);
-    
+
     if (item && produto) {
         if (novaQuantidade <= 0) {
             removerDoCarrinho(idProduto);
             return;
         }
-        
+
         const diferenca = novaQuantidade - item.quantidade;
-        
+
         if (produto.estoque < diferenca) {
             mostrarMensagem(`❌ Estoque insuficiente! Temos apenas ${produto.estoque} unidades.`, 'erro');
             return;
         }
-        
+
         produto.estoque -= diferenca;
         item.quantidade = novaQuantidade;
         atualizarInterface();
@@ -179,7 +176,7 @@ function limparCarrinho() {
             produto.estoque += item.quantidade;
         }
     });
-    
+
     carrinho = [];
     atualizarInterface();
     mostrarMensagem('🔄 Carrinho limpo!', 'info');
@@ -192,13 +189,13 @@ function atualizarInterface() {
     const totalItens = calcularQuantidadeItens();
     const totalComDesconto = aplicarDesconto(subtotal, totalItens);
     const pontos = Math.floor(totalComDesconto);
-    
+
     // Atualizar displays
     document.getElementById('totalCarrinho').textContent = formatarMoeda(totalComDesconto);
     document.getElementById('quantidadeItens').textContent = totalItens;
     document.getElementById('pontosGanhos').textContent = pontos;
     document.getElementById('descontoAplicado').textContent = formatarMoeda(subtotal - totalComDesconto);
-    
+
     // Atualizar lista do carrinho
     const listaCarrinho = document.getElementById('listaCarrinho');
     if (listaCarrinho) {
@@ -208,7 +205,7 @@ function atualizarInterface() {
             listaCarrinho.innerHTML = carrinho.map(item => `
                 <div class="item-carrinho">
                     <img src="${item.imagem}" alt="${item.nome}" class="item-imagem" 
-                         onerror="this.src='https://via.placeholder.com/60x60/FFB347/000000?text=${item.nome.substring(0,3)}'">
+                         onerror="this.src='https://via.placeholder.com/60x60/FFB347/000000?text=${item.nome.substring(0, 3)}'">
                     <div class="item-info">
                         <h4>${item.nome}</h4>
                         <p class="item-preco">${formatarMoeda(item.preco)} cada</p>
@@ -226,11 +223,11 @@ function atualizarInterface() {
             `).join('');
         }
     }
-    
+
     // Mostrar/ocultar mensagem de carrinho vazio
     const carrinhoVazio = document.getElementById('carrinhoVazio');
     const carrinhoItens = document.getElementById('carrinhoItens');
-    
+
     if (carrinhoVazio && carrinhoItens) {
         if (carrinho.length === 0) {
             carrinhoVazio.style.display = 'block';
@@ -240,7 +237,7 @@ function atualizarInterface() {
             carrinhoItens.style.display = 'block';
         }
     }
-    
+
     // Atualizar lista de produtos (estoque)
     atualizarListaProdutos();
 }
@@ -248,16 +245,16 @@ function atualizarInterface() {
 // 🎯 CARREGAR PRODUTOS
 function carregarProdutos() {
     const listaProdutos = document.getElementById('listaProdutos');
-    
+
     if (!listaProdutos) {
         console.error('❌ Elemento listaProdutos não encontrado!');
         return;
     }
-    
+
     listaProdutos.innerHTML = produtosPadaria.map(produto => `
         <div class="card-produto">
             <img src="${produto.imagem}" alt="${produto.nome}" class="produto-imagem"
-                 onerror="this.src='https://via.placeholder.com/80x80/FFB347/000000?text=${produto.nome.substring(0,3)}'">
+                 onerror="this.src='https://via.placeholder.com/80x80/FFB347/000000?text=${produto.nome.substring(0, 3)}'">
             <div class="produto-info">
                 <h4>${produto.nome}</h4>
                 <p class="produto-descricao">${produto.descricao}</p>
@@ -288,14 +285,14 @@ function mostrarMensagem(mensagem, tipo = "sucesso") {
             document.body.removeChild(msg);
         }
     });
-    
+
     // Criar nova mensagem
     const mensagemDiv = document.createElement('div');
     mensagemDiv.className = `mensagem-flotuante mensagem-${tipo}`;
     mensagemDiv.textContent = mensagem;
-    
+
     document.body.appendChild(mensagemDiv);
-    
+
     // Remover após 3 segundos
     setTimeout(() => {
         if (document.body.contains(mensagemDiv)) {
@@ -310,12 +307,12 @@ function finalizarPedido() {
         mostrarMensagem('❌ Seu carrinho está vazio! Adicione alguns produtos.', 'erro');
         return;
     }
-    
+
     const subtotal = calcularTotalCarrinho();
     const totalItens = calcularQuantidadeItens();
     const totalComDesconto = aplicarDesconto(subtotal, totalItens);
     const pontos = Math.floor(totalComDesconto);
-    
+
     // Criar modal de confirmação
     const modalHTML = `
         <div class="modal-pedido">
@@ -378,7 +375,7 @@ function finalizarPedido() {
             </div>
         </div>
     `;
-    
+
     // Adicionar modal ao body
     document.body.insertAdjacentHTML('beforeend', modalHTML);
 }
@@ -402,15 +399,15 @@ function imprimirPedido() {
 
 // 🎯 FILTRAR PRODUTOS POR CATEGORIA
 function filtrarProdutos(categoria) {
-    const produtosFiltrados = categoria === 'todos' 
-        ? produtosPadaria 
+    const produtosFiltrados = categoria === 'todos'
+        ? produtosPadaria
         : produtosPadaria.filter(produto => produto.categoria === categoria);
-    
+
     const listaProdutos = document.getElementById('listaProdutos');
     listaProdutos.innerHTML = produtosFiltrados.map(produto => `
         <div class="card-produto">
             <img src="${produto.imagem}" alt="${produto.nome}" class="produto-imagem"
-                 onerror="this.src='https://via.placeholder.com/80x80/FFB347/000000?text=${produto.nome.substring(0,3)}'">
+                 onerror="this.src='https://via.placeholder.com/80x80/FFB347/000000?text=${produto.nome.substring(0, 3)}'">
             <div class="produto-info">
                 <h4>${produto.nome}</h4>
                 <p class="produto-descricao">${produto.descricao}</p>
@@ -429,11 +426,11 @@ function filtrarProdutos(categoria) {
 }
 
 // 🎯 INICIALIZAÇÃO
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Configurar botões de categoria
     const botoesCategoria = document.querySelectorAll('.btn-categoria');
     botoesCategoria.forEach(botao => {
-        botao.addEventListener('click', function() {
+        botao.addEventListener('click', function () {
             // Remover classe active de todos
             botoesCategoria.forEach(b => b.classList.remove('active'));
             // Adicionar classe active ao botão clicado
@@ -443,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
             filtrarProdutos(categoria);
         });
     });
-    
+
     // Carregar produtos iniciais
     carregarProdutos();
     atualizarInterface();

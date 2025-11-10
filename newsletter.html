@@ -10,79 +10,78 @@
 
 <body>
     <section class="top-section">
-    <header class="header">
-        <img src="images/logo/logo.png" alt="Logo Maria do Bairro" class="header-logo">
-        <h1>Maria do Bairro - Padaria</h1>
-    </header>
+        <header class="header">
+            <img src="images/logo/logo.png" alt="Logo Maria do Bairro" class="header-logo">
+            <h1>Maria do Bairro - Padaria</h1>
+        </header>
 
-    <nav class="nav">
-        <div class="nav-container">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pedidos.html">Pedidos</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="newsletter.html" class="active">Newsletter</a></li>
-                <li><a href="carrinho.html">🛒 Carrinho</a></li>
-            </ul>
-        </div>
-    </nav>
-</section>
+        <nav class="nav">
+            <div class="nav-container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pedidos.html">Pedidos</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="newsletter.html" class="active">Newsletter</a></li>
+                    <li><a href="carrinho.html">🛒 Carrinho</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
 
     <main class="main">
         <section class="hero" style="background-image: url('images/hero/newsletter-hero.jpg');">
-    <div class="hero-overlay">
-        <div class="hero-content">
-            <h2>📰 Fique por Dentro</h2>
-            <p>Receba nossas novidades e promoções especiais</p>
-        </div>
-    </div>
-</section>
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h2>📰 Fique por Dentro</h2>
+                    <p>Receba nossas novidades e promoções especiais</p>
+                </div>
+            </div>
+        </section>
         <section class="form-section">
             <h2>Cadastro na Newsletter</h2>
-            <p class="form-description">Cadastre-se para receber nossas novidades, promoções exclusivas e receitas especiais!</p>
-            
+            <p class="form-description">Cadastre-se para receber nossas novidades, promoções exclusivas e receitas
+                especiais!</p>
+
             <form action="#" method="post" class="newsletter-form">
 
                 <fieldset>
                     <legend>🧑 Dados Pessoais</legend>
-                    
+
                     <div class="form-group">
                         <label for="nomeCompleto">Nome completo: *</label>
-                        <input type="text" id="nomeCompleto" name="nomeCompleto" required 
-                               placeholder="Seu nome completo">
+                        <input type="text" id="nomeCompleto" name="nomeCompleto" required
+                            placeholder="Seu nome completo">
                     </div>
 
                     <div class="form-group">
                         <label for="email">📧 Email: *</label>
-                        <input type="email" id="email" name="email" required 
-                               placeholder="seu@email.com">
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
                     </div>
 
                     <div class="form-group">
-    <label for="telefone">📞 Telefone: *</label>
-    <input type="tel" id="telefone" name="telefone" required 
-           pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
-           placeholder="(35) 99999-9999">
-    <small class="form-help">Formato: (DD) 99999-9999</small>
-</div>
+                        <label for="telefone">📞 Telefone: *</label>
+                        <input type="tel" id="telefone" name="telefone" required pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+                            placeholder="(35) 99999-9999">
+                        <small class="form-help">Formato: (DD) 99999-9999</small>
+                    </div>
 
                     <div class="form-group">
                         <label for="dataNascimento">🎂 Data de nascimento: *</label>
-                        <input type="date" id="dataNascimento" name="dataNascimento" required 
-                               max="<?php echo date('Y-m-d'); ?>">
+                        <input type="date" id="dataNascimento" name="dataNascimento" required
+                            max="<?php echo date('Y-m-d'); ?>">
                     </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>🏠 Endereço</legend>
-                    
+
                     <div class="address-fields">
                         <div class="form-group">
                             <label for="rua">Rua: *</label>
                             <input type="text" id="rua" name="rua" required placeholder="Nome da rua">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="numero">Número: *</label>
                             <input type="text" id="numero" name="numero" required placeholder="Nº">
@@ -97,49 +96,49 @@
 
                         <div class="form-group">
                             <label for="cep">CEP: *</label>
-                            <input type="text" id="cep" name="cep" required 
-                                   pattern="[0-9]{5}-[0-9]{3}" 
-                                   placeholder="00000-000">
+                            <input type="text" id="cep" name="cep" required pattern="[0-9]{5}-[0-9]{3}"
+                                placeholder="00000-000">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="complemento">Complemento:</label>
-                        <input type="text" id="complemento" name="complemento" 
-                               placeholder="Apartamento, bloco, etc.">
+                        <input type="text" id="complemento" name="complemento" placeholder="Apartamento, bloco, etc.">
                     </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>✅ Preferências</legend>
-                    <p class="preference-description">Quais tipos de produtos você mais gosta? (Marque quantos quiser)</p>
-                    
+                    <p class="preference-description">Quais tipos de produtos você mais gosta? (Marque quantos quiser)
+                    </p>
+
                     <div class="checkbox-group">
                         <label><input type="checkbox" name="preferencias" value="paes"> 🥖 Pães artesanais</label>
                         <label><input type="checkbox" name="preferencias" value="bolos"> 🍰 Doces e bolos</label>
                         <label><input type="checkbox" name="preferencias" value="salgados"> 🥐 Salgados</label>
                         <label><input type="checkbox" name="preferencias" value="diet"> 🥗 Produtos diet/light</label>
-                        <label><input type="checkbox" name="preferencias" value="integrais"> 🌾 Produtos integrais</label>
+                        <label><input type="checkbox" name="preferencias" value="integrais"> 🌾 Produtos
+                            integrais</label>
                         <label><input type="checkbox" name="preferencias" value="tortas"> 🥧 Tortas especiais</label>
                     </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>📝 Termos e Condições</legend>
-                    
+
                     <div class="checkbox-group">
                         <label class="checkbox-required">
-                            <input type="checkbox" name="promocoes" required> 
+                            <input type="checkbox" name="promocoes" required>
                             📩 Aceita receber promoções e novidades por email *
                         </label>
-                        
+
                         <label class="checkbox-required">
-                            <input type="checkbox" name="termos" required> 
-                            ✅ Aceito os <a href="#" class="terms-link">termos de uso</a> e 
+                            <input type="checkbox" name="termos" required>
+                            ✅ Aceito os <a href="#" class="terms-link">termos de uso</a> e
                             <a href="#" class="terms-link">política de privacidade</a> *
                         </label>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="comunicacoes">Frequência preferida de comunicação:</label>
                         <select id="comunicacoes" name="comunicacoes">
@@ -153,7 +152,7 @@
                 </fieldset>
 
                 <button type="submit" class="btn-submit">📝 Cadastrar na Newsletter</button>
-                
+
                 <p class="form-footer">
                     🔒 Seus dados estão protegidos. Não compartilhamos suas informações com terceiros.
                 </p>
@@ -172,138 +171,138 @@
         </nav>
     </footer>
     <script>
-// Validação e melhorias para a newsletter
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.newsletter-form');
-    const telefoneInput = document.getElementById('telefone');
-    const cepInput = document.getElementById('cep');
-    
-    // Formatação do telefone - VERSÃO CORRIGIDA
-telefoneInput.addEventListener('input', function(e) {
-    let value = e.target.value.replace(/\D/g, '');
-    
-    // Limitar a 11 dígitos (DD + 9 dígitos)
-    if (value.length > 11) value = value.slice(0, 11);
-    
-    // Aplicar máscara
-    if (value.length > 0) {
-        if (value.length <= 2) {
-            value = `(${value}`;
-        } else if (value.length <= 6) {
-            value = `(${value.slice(0,2)}) ${value.slice(2)}`;
-        } else if (value.length <= 10) {
-            value = `(${value.slice(0,2)}) ${value.slice(2,6)}-${value.slice(6)}`;
-        } else {
-            value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
-        }
-    }
-    
-    e.target.value = value;
-    
-    // Validar em tempo real
-    const pattern = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
-    if (pattern.test(value)) {
-        e.target.style.borderColor = '#28a745';
-    } else {
-        e.target.style.borderColor = '#E8D6C3';
-    }
-});
-    
-    // Formatação do CEP
-    cepInput.addEventListener('input', function(e) {
-        let value = e.target.value.replace(/\D/g, '');
-        if (value.length > 8) value = value.slice(0, 8);
-        
-        if (value.length > 5) {
-            value = `${value.slice(0,5)}-${value.slice(5)}`;
-        }
-        
-        e.target.value = value;
-    });
-    
-    // Validação de idade mínima (16 anos)
-    const dataNascimentoInput = document.getElementById('dataNascimento');
-    dataNascimentoInput.addEventListener('change', function() {
-        const dataNascimento = new Date(this.value);
-        const hoje = new Date();
-        const idade = hoje.getFullYear() - dataNascimento.getFullYear();
-        const mes = hoje.getMonth() - dataNascimento.getMonth();
-        
-        if (mes < 0 || (mes === 0 && hoje.getDate() < dataNascimento.getDate())) {
-            idade--;
-        }
-        
-        if (idade < 16) {
-            alert('⚠️ É necessário ter pelo menos 16 anos para se cadastrar.');
-            this.value = '';
-        }
-    });
-    
-    // Validação do formulário
-    form.addEventListener('submit', function(e) {
-        const checkboxes = form.querySelectorAll('input[type="checkbox"]');
-        let peloMenosUmaPreferencia = false;
-        
-        // Verificar preferências
-        checkboxes.forEach(checkbox => {
-            if (checkbox.name === 'preferencias' && checkbox.checked) {
-                peloMenosUmaPreferencia = true;
-            }
+        // Validação 
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.newsletter-form');
+            const telefoneInput = document.getElementById('telefone');
+            const cepInput = document.getElementById('cep');
+
+            // Formatação do telefone 
+            telefoneInput.addEventListener('input', function (e) {
+                let value = e.target.value.replace(/\D/g, '');
+
+                // Limitar a 11 dígitos (DD + 9 dígitos)
+                if (value.length > 11) value = value.slice(0, 11);
+
+                // Aplicar máscara
+                if (value.length > 0) {
+                    if (value.length <= 2) {
+                        value = `(${value}`;
+                    } else if (value.length <= 6) {
+                        value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+                    } else if (value.length <= 10) {
+                        value = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6)}`;
+                    } else {
+                        value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+                    }
+                }
+
+                e.target.value = value;
+
+                // Validar em tempo real
+                const pattern = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
+                if (pattern.test(value)) {
+                    e.target.style.borderColor = '#28a745';
+                } else {
+                    e.target.style.borderColor = '#E8D6C3';
+                }
+            });
+
+            // Formatação do CEP
+            cepInput.addEventListener('input', function (e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 8) value = value.slice(0, 8);
+
+                if (value.length > 5) {
+                    value = `${value.slice(0, 5)}-${value.slice(5)}`;
+                }
+
+                e.target.value = value;
+            });
+
+            // Validação de idade mínima (16 anos)
+            const dataNascimentoInput = document.getElementById('dataNascimento');
+            dataNascimentoInput.addEventListener('change', function () {
+                const dataNascimento = new Date(this.value);
+                const hoje = new Date();
+                const idade = hoje.getFullYear() - dataNascimento.getFullYear();
+                const mes = hoje.getMonth() - dataNascimento.getMonth();
+
+                if (mes < 0 || (mes === 0 && hoje.getDate() < dataNascimento.getDate())) {
+                    idade--;
+                }
+
+                if (idade < 16) {
+                    alert('⚠️ É necessário ter pelo menos 16 anos para se cadastrar.');
+                    this.value = '';
+                }
+            });
+
+            // Validação do formulário
+            form.addEventListener('submit', function (e) {
+                const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+                let peloMenosUmaPreferencia = false;
+
+                // Verificar preferências
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.name === 'preferencias' && checkbox.checked) {
+                        peloMenosUmaPreferencia = true;
+                    }
+                });
+
+                if (!peloMenosUmaPreferencia) {
+                    e.preventDefault();
+                    alert('🎯 Por favor, selecione pelo menos um tipo de produto que você gosta!');
+                    return;
+                }
+
+                // Verificar termos obrigatórios
+                const termosPromocoes = form.querySelector('input[name="promocoes"]');
+                const termosUso = form.querySelector('input[name="termos"]');
+
+                if (!termosPromocoes.checked || !termosUso.checked) {
+                    e.preventDefault();
+                    alert('📝 Por favor, aceite os termos e condições para se cadastrar.');
+                    return;
+                }
+
+                // Simulação de sucesso 
+                e.preventDefault();
+
+                // Animação de sucesso
+                const submitBtn = form.querySelector('.btn-submit');
+                const originalText = submitBtn.textContent;
+
+                submitBtn.textContent = '🎉 Cadastrando...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    alert('✅ Cadastro realizado com sucesso!\n\n📬 Em breve você receberá nossas novidades e promoções exclusivas!');
+                    form.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+
+                    // Scroll para o topo
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 2000);
+            });
+
+            // Efeito visual nos checkboxes
+            const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function () {
+                    const label = this.closest('label');
+                    if (this.checked) {
+                        label.style.background = 'linear-gradient(135deg, #fff8f0, #ffeedd)';
+                        label.style.borderColor = 'var(--laranja-dourado)';
+                    } else {
+                        label.style.background = '';
+                        label.style.borderColor = '#f0f0f0';
+                    }
+                });
+            });
         });
-        
-        if (!peloMenosUmaPreferencia) {
-            e.preventDefault();
-            alert('🎯 Por favor, selecione pelo menos um tipo de produto que você gosta!');
-            return;
-        }
-        
-        // Verificar termos obrigatórios
-        const termosPromocoes = form.querySelector('input[name="promocoes"]');
-        const termosUso = form.querySelector('input[name="termos"]');
-        
-        if (!termosPromocoes.checked || !termosUso.checked) {
-            e.preventDefault();
-            alert('📝 Por favor, aceite os termos e condições para se cadastrar.');
-            return;
-        }
-        
-        // Simulação de sucesso (remova isso quando conectar com backend)
-        e.preventDefault();
-        
-        // Animação de sucesso
-        const submitBtn = form.querySelector('.btn-submit');
-        const originalText = submitBtn.textContent;
-        
-        submitBtn.textContent = '🎉 Cadastrando...';
-        submitBtn.disabled = true;
-        
-        setTimeout(() => {
-            alert('✅ Cadastro realizado com sucesso!\n\n📬 Em breve você receberá nossas novidades e promoções exclusivas!');
-            form.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            
-            // Scroll para o topo
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 2000);
-    });
-    
-    // Efeito visual nos checkboxes
-    const checkboxes = form.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            const label = this.closest('label');
-            if (this.checked) {
-                label.style.background = 'linear-gradient(135deg, #fff8f0, #ffeedd)';
-                label.style.borderColor = 'var(--laranja-dourado)';
-            } else {
-                label.style.background = '';
-                label.style.borderColor = '#f0f0f0';
-            }
-        });
-    });
-});
-</script>
+    </script>
 </body>
 
 </html>
