@@ -56,7 +56,7 @@ Carrinho Funcional
 ## 👩‍💻 Autor
 - GitHub: [@abhadom](https://github.com/abhadom)
 - LinkedIn: [Gisele Almeida](https://linkedin.com/in/gisele-ealmeida)
-- Site: [Maria do Bairro](abhadom.github.io)
+- Site: [Maria do Bairro](https://abhadom.github.io/maria-do-bairro/)
 
 ***
 
